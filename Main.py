@@ -8,7 +8,7 @@ class Evaluate:
     # Write your code here
 
 
-  def __init__(self, size):
+  def init(self, size):
     """Inits Evaluate with top, size_of_stack and stack.
     Arguments:
       size_of_stack: An integer to set the size of stack.
@@ -25,7 +25,7 @@ class Evaluate:
       True if it is empty, else returns False.
     """
       # Write your code here
-      if len(self.stack) == 0:
+    if len(self.stack) == 0:
         return True
     else:
         return False
@@ -62,6 +62,8 @@ class Evaluate:
       True if the expression is valid, else returns False.
     """
     # Write your code here
+    value = True
+    
     valid = ['+','-','*','/']
     
     for char in expression:
@@ -81,7 +83,9 @@ class Evaluate:
     Returns:
       The result of evaluated postfix expression.
     """
+    
     # Write your code here
+    
     for char in expression:
         if char.isdigit():
             self.push(char)
